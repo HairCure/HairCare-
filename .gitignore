@@ -1,14 +1,23 @@
-# Xcode
-#
-# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+# ==========================================
+# Xcode / iOS / macOS Project Gitignore
+# ==========================================
 
-## User settings
+## System Files
+.DS_Store
+**/.DS_Store
+
+## User Settings and Workspace State
+## (Prevents personal layout/state tracking)
 xcuserdata/
+*.xcuserstate
+*.xcuserdatad
 
-## Obj-C/Swift specific
+## Xcode Build Artifacts
+DerivedData/
+.build/
 *.hmap
 
-## App packaging
+## App Packaging & Crash Logs
 *.ipa
 *.dSYM.zip
 *.dSYM
@@ -17,46 +26,36 @@ xcuserdata/
 timeline.xctimeline
 playground.xcworkspace
 
-# Swift Package Manager
-#
-# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# ==========================================
+# Dependency Managers
+# ==========================================
+
+## Swift Package Manager
+## (Uncomment Packages/ if you want to completely ignore local package source code)
 # Packages/
-# Package.pins
-# Package.resolved
-# *.xcodeproj
-#
-# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
-# hence it is not needed unless you have added a package configuration file to your project
-# .swiftpm
+.swiftpm/
+Package.resolved
 
-.build/
-
-# CocoaPods
-#
-# We recommend against adding the Pods directory to your .gitignore. However
-# you should judge for yourself, the pros and cons are mentioned at:
-# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
-#
+## CocoaPods
+## (Uncomment Pods/ if you prefer not to commit your third-party source code)
 # Pods/
-#
-# Add this line if you want to avoid checking in source code from the Xcode workspace
 # *.xcworkspace
 
-# Carthage
-#
-# Add this line if you want to avoid checking in source code from Carthage dependencies.
+## Carthage
+Carthage/Build/
 # Carthage/Checkouts
 
-Carthage/Build/
-
-# fastlane
-#
-# It is recommended to not store the screenshots in the git repo.
-# Instead, use fastlane to re-generate the screenshots whenever they are needed.
-# For more information about the recommended setup visit:
-# https://docs.fastlane.tools/best-practices/source-control/#source-control
-
+# ==========================================
+# Automation & CI/CD (fastlane)
+# ==========================================
 fastlane/report.xml
 fastlane/Preview.html
 fastlane/screenshots/**/*.png
 fastlane/test_output
+
+# ==========================================
+# Security & Secrets
+# ==========================================
+Secrets.plist
+**/Secrets.plist
+**/.DS_Store
